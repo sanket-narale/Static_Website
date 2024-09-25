@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            overflow: hidden;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        .game-container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 0;
+            color: #ff4444;
+        }
+
+        .error-code {
+            font-size: 100px;
+            margin: 0;
+            color: #ff4444;
+            animation: glitch 1.5s infinite;
+        }
+
+        .message {
+            font-size: 24px;
+            color: #ddd;
+            margin-top: 10px;
+            animation: blink 1.5s infinite;
+        }
+
+        .game-container .spaceship {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn-icons-png.flaticon.com/512/326/326530.png') no-repeat center;
+            background-size: contain;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(-2px, 2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(-2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        .game-container .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .game-container .button:hover {
+            background-color: #ff8888;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="spaceship"></div>
+        <h1 class="error-code">404</h1>
+        <p class="message">You seem to be lost in space...</p>
+        <a href="/" class="button">Go Back Home</a>
+    </div>
+</body>
+</html>
